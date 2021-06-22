@@ -12,8 +12,7 @@ def testget():
 @app.route('/ping', methods=['POST'])
 def testpost():
      input_json = request.get_json()                        # {"url": "http://api.plos.org/search?q=title:DNA"}
-     print(input_json['url'])                               # {"url": "http://ergast.com/api/f1/2004/1/results.json"}
-     res = requests.get(input_json['url']).json()
+     res = requests.get(input_json['url']).json()           # {"url": "http://ergast.com/api/f1/2004/1/results.json"}
      return jsonify(res)
 
 
